@@ -1,5 +1,3 @@
-## 🖼️ Streamlit UI Preview
-
 ![Invoice Bot Streamlit UI](streamlit_ui.png)
 
 # Invoice Bot – Automated Invoice Extraction System (Python + OCR + RPA)

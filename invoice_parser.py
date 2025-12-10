@@ -120,11 +120,6 @@ def extract_total_amount(text: str):
     2. If no labeled total is found, scan all money-like decimals and
        pick the largest realistic one (using _to_float).
     """
-
-    # 1️⃣ Label-based patterns (high priority)
-    #   Matches:  'TOTAL PAY   $11,495.04'
-    #             'GRAND TOTAL : 1856.06'
-    #             'Total amount  16,134.56'
     labeled_pattern = re.compile(
         r"(TOTAL PAY|TOTAL PRICE|GRAND TOTAL|Total Amount|Total amount|Amount Payable|Invoice Total)"
         r"[^\d]*([\$₹]?\s*[\d,]+\.\d{2})",
@@ -144,8 +139,6 @@ def extract_total_amount(text: str):
         if candidates:
             best_str, _ = max(candidates, key=lambda x: x[1])
             return best_str
-
-    # 2️⃣ Generic fallback – collect all decimal numbers like 16,134.56 / 1799.00
     all_numbers = re.findall(r"\d[\d,]*\.\d{2}", text)
     if not all_numbers:
         return None

@@ -1,3 +1,6 @@
 2025-12-10 03:29:22 - INFO - sample1 - OK - All key fields present.
 2025-12-10 03:29:23 - INFO - sample2 - OK - All key fields present.
 2025-12-10 03:29:25 - INFO - sample3 - WARNING - Missing fields: Invoice Number
+2025-12-10 21:22:35 - INFO - sample1 - OK - All key fields present.
+2025-12-10 21:22:37 - INFO - sample2 - OK - All key fields present.
+2025-12-10 21:22:38 - INFO - sample3 - WARNING - Missing fields: Invoice Number
